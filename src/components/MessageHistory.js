@@ -5,7 +5,7 @@ import Message from './Message';
 import Typing from './Typing';
 
 const propTypes = {
-  messages: PropTypes.arrayOf(
+  list: PropTypes.arrayOf(
     PropTypes.shape({
       from: PropTypes.object.isRequired,
       id: PropTypes.string.isRequired,
@@ -26,11 +26,11 @@ const Item = ({ message }) => {
   }
 };
 
-const MessageHistory = ({ messages }) => {
+const MessageHistory = ({ list: messages }) => {
   return (
-    <ul className='chat-history'>
+    <ul className="chat-history">
       {messages.map((message) => (
-        <li key={message.id} className='clearfix'>
+        <li key={message.id} className="clearfix">
           <Item message={message} />
         </li>
       ))}

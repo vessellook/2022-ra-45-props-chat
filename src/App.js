@@ -41,7 +41,7 @@ const messages = [
 function App() {
   return (
     <div className='chat'>
-      <MessageHistory messages={messages}/>
+      <MessageHistory list={messages}/>
     </div>
   );
 }
